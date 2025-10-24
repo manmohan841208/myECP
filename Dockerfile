@@ -4,6 +4,7 @@ FROM node:18-alpine AS builder
 # Step 2: Set the working directory
 WORKDIR /app
 RUN npm i -D eslint-config-prettier
+RUN npm install --save-dev @types/tailwindcss
  
 # Step 3: Copy package files and install dependencies
 COPY package*.json ./
