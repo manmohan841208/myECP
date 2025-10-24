@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: [
@@ -42,19 +43,14 @@ const config: Config = {
     },
   },
   plugins: [
-    function ({ addUtilities }) {
+    plugin(function ({ addUtilities }) {
       const newUtilities = {
         ".focus-visible": {
           outline: "2px solid var(--color-primary)",
-          outlineOffset: "2px",
-        },
-        ".high-contrast": {
-          color: "var(--color-black)",
-          backgroundColor: "var(--color-white)",
         },
       };
-      addUtilities(newUtilities, ["responsive", "focus", "hover"]);
-    },
+      addUtilities(newUtilities);
+    }),
   ],
 };
 export default config;
