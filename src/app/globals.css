@@ -54,7 +54,7 @@
   --color-grey-table-alt: #F1F1F1;
   --color-blue: #042757;
   --color-blue-light: #C4D6EB;
-  --color-green: #318B29;
+  --color-green: #297D21;
   --color-red: #B70100;
   --color-link: #0000FF;
   --color-disabled-text: #848484;
@@ -70,6 +70,8 @@
   
   --secondary-border: var(--color-red);
   --border: var(--color-black);
+
+  --disable-bg: (var(--color-grey-table))
 
   --primary-btn-background: var(--color-blue);
   --primary-color: var(--color-blue);
@@ -110,6 +112,7 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
+
 .navbar{
  background-image: linear-gradient(180deg, #FFFFFF 0%, #D7D7D7 100%)
 }
@@ -127,3 +130,14 @@
   }
   /* @apply bg-background text-foreground; */
 }
+
+@media (max-width: 768px) {
+  .customCard {
+    box-shadow: none;
+  }
+}
+
+.border{
+  border: 1px solid #042757;
+}
+
